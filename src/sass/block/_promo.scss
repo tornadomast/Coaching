@@ -1,0 +1,15 @@
+.promo {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(188.77deg, rgba(195, 170, 164, 0.2) 3.6%, rgba(255, 47, 7, 0.2) 83.83%, rgba(196, 170, 165, 0.2) 138.01%), linear-gradient(168.69deg, rgba(194, 219, 226, 0.8) -0.73%, rgba(189, 224, 231, 0.8) 101.39%);
+    &__title {
+        margin-top: 200px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 60px;
+        
+    }
+   
+    
+}
