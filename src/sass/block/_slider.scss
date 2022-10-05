@@ -9,3 +9,21 @@
         height: 700px;
     }
 }
+
+
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .slider {
+        &__carousel {
+            min-height: fit-content;
+            margin-bottom: 60px;
+        }
+        img {
+            height: 300px;
+        }
+    }
+    
+}
