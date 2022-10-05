@@ -1,6 +1,6 @@
 .promo {
     position: relative;
-    min-height: 100vh;
+    min-height: 950px;
     padding: 145px 20px;
     
     &__item {
@@ -106,5 +106,12 @@
     .container {
         width: 100%;
         padding: 0 20px;
+    }
+    .promo {
+       &__divided {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+       }
     }
 }
