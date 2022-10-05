@@ -1,0 +1,11 @@
+.slider {
+    &__carousel {
+        margin-bottom: 60px;
+        min-height: 700px;
+        
+    }
+    img {
+        object-fit: cover;
+        height: 700px;
+    }
+}

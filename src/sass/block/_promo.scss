@@ -1,7 +1,7 @@
 .promo {
     position: relative;
-    min-height: 950px;
-    padding: 145px 20px;
+    min-height: 100vh;
+    padding: 145px 20px 0 20px;
     
     &__item {
         display:flex;
@@ -58,7 +58,7 @@
         width: 700px;
         height: 3px;
         background-color: $main-color;
-        margin: 120px auto;
+        margin: 60px auto 60px auto;
     }
 }
 @media (max-width: 992px) {
