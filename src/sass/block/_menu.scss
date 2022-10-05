@@ -1,0 +1,50 @@
+.menu {
+    padding: 10px;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 4;
+    visibility: hidden;
+    transition: all 2s;
+    background-color: #ededee;
+    &.active {
+        position: fixed;
+        top: 92px;
+        visibility: visible;
+        transition: all 1.5s;
+        border-bottom: 2px solid $border-color;
+        height: fit-content;
+    }
+    &__block {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        //margin-top: 15px;
+    }
+    &__list {
+       // margin-left: 80px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    &__link {
+        margin: 0 40px;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+

@@ -1,23 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Poppins:ital,wght@0,700;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Poppins:ital,wght@0,700;1,500&family=Roboto:wght@300;400;500;700&display=swap');
 @import './libs/bootstrap-reboot.min.css';
 @import './base/variables';
 @import './base/mixins';
 
 
 * {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    // background-color: #DAC6C6;
 }
 .container {
     width: 1140px;
     margin: 0 auto;
+
 }
+
+body {
+    background-color: #ededee;
+} 
+
+
 
 
 
 @import './block/promo';
 @import './block/navbar';
 @import './block/about';
+@import './block/menu';
