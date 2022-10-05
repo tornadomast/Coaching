@@ -108,10 +108,35 @@
         padding: 0 20px;
     }
     .promo {
-       &__divided {
+        &__content {
+            grid-template-columns: auto;
+        }
+        &__title {
+            //position: relative;
+            //@include circle;
+            h1 {
+                font-weight: 700;
+                font-size: 38px;
+                line-height: 50px;
+                color: #101130;
+            }
+        }
+        &__subtitle {
+            width: 280px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        &__foto {
+            margin: 0;
+            img {
+                width: 100%;
+            }
+        }
+        &__divided {
         display: block;
-        margin: 0 auto;
-        width: 300px;
-       }
+        margin: 30px auto;
+        width: 200px;
+        }
     }
 }
