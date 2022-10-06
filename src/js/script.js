@@ -3,11 +3,10 @@ const hamburger = document.querySelector('.navbar__hamburger'),
         menu = document.querySelector('.menu');
 
 hamburger.addEventListener('click', () => {
-    menu.classList.add('active')
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
 });
-menu.addEventListener('click', () => {
-    menu.classList.remove('active')
-});
+
 
 $(document).ready(function(){
     $('.slider__carousel').slick({
@@ -17,7 +16,7 @@ $(document).ready(function(){
         autoplaySpeed: 2500,
         dots: false,
         infinite: true,
-        speed: 700,
+        speed: 300,
         fade: true,
         arrows: false,
         adaptiveHeight: true,

@@ -118,8 +118,22 @@
                     background-color: black;
                     margin-bottom: 5px;
                 } 
+            &.active {
+            span {
+                margin-top: -4px;
+                &:nth-child(1) {
+                    transform: translateY(13px) rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    transform: translateY(7px) rotate(45deg);
+                }  
+             
             }
-    }
+            }
+        }
 }
 
 @media (max-width: 576px) {
@@ -145,6 +159,7 @@
                     margin-bottom: 5px;
                 } 
             }
+        }
     }
     
 }

@@ -2,10 +2,10 @@
     &__carousel {
         margin-bottom: 60px;
         min-height: 700px;
-        
+        object-fit: cover;
     }
     img {
-        object-fit: cover;
+        object-fit: fill;
         height: 700px;
     }
 }
@@ -17,6 +17,7 @@
         padding: 0 20px;
     }
     .slider {
+        display: none;
         &__carousel {
             min-height: fit-content;
             margin-bottom: 60px;
