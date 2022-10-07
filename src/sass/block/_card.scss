@@ -1,0 +1,244 @@
+.card {
+    .title {
+        margin: 0 0 60px 0;
+    }
+    &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 56px;
+        text-align: center;
+        color: #101130;
+        padding-bottom: 30px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 5px;
+            background: #33B2CB;
+            bottom: 0;
+            right: 50%;
+            transform: translate(50%);
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 15px; 
+        justify-content: space-around;
+    }
+    &__box {
+        position: relative;
+        width: 300px;
+        min-height: 450px;
+        border: 1px solid $main-color;
+        border-radius: 12px;
+        margin: 0px 0px 30px 0px;
+        padding: 0 0 10px 0;
+        //background: linear-gradient(180deg, #67AAF0 0%, #CFB873 100%);
+        &::after {
+            content: '';
+            left: 50%;
+            transform: translate(-50%);
+            position: absolute;
+            height: 2px;
+            width: 260px;
+            background: $line-color;
+            bottom: 60px;
+        }
+        .item-card {
+            visibility: visible;
+            position: relative;
+            height: 100%;
+            padding: 15px;
+            left: 0;
+            transition: 1s all;
+            &_active {
+                visibility: hidden;
+                transform: rotateY(-90deg);
+                
+            }  
+            &__picture {
+                margin: 0 auto 30px auto;
+                display: flex;
+                justify-content: center;
+                img {
+                    height: 160px;
+                    width: 100%;
+                }
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                color: #101130;
+                text-align: center;;
+            }
+            &__detal {
+                position: absolute;
+                bottom: 60px;
+                left: 50%;
+                transform: translate(-50%);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: $line-color;
+                cursor: pointer;
+                &:hover {
+                    transition: 0.6s all;
+                    color: $main-color;
+                    text-shadow: 0 0 2px $main-color;
+                }
+                
+            }
+            &__price-box {
+                position: absolute;
+                width: 260px;
+                height: 50px;
+                display: flex;
+                bottom: -5px;
+                justify-content: space-around;
+                align-items:center;
+            }
+            &__price {
+                padding: 5px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 22px;
+                color: #000000;
+            }
+            &__btn {
+                width: 110px;
+                height: 40px;
+                padding: 10px;
+                border: 1px solid #2076FF;
+                border-radius: 7px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: #2076FF;
+                &:hover {
+                    transition: 0.6s all;
+                    color: #fff;
+                    background-color: #2076FF;
+                    text-shadow: 0 0 2px $main-color;
+                }
+            }
+            &__catalog {
+                width: 210px;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                border: 1px solid #2076FF;
+                border-radius: 7px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: #2076FF;
+                a {
+                    text-decoration: none;
+                    width: 100%;
+                }
+                &:hover {
+                    transition: 0.6s all;
+                    color: #fff;
+                    background-color: #2076FF;
+                    text-shadow: 0 0 2px $main-color; 
+                    a {
+                        
+                        color: #fff;
+                    }
+                }
+                
+            }
+        }
+        .item-info {
+            position: absolute;
+            top: 0;
+            min-height: 400px;
+            width: 300px;
+            left: -100%;
+            padding: 20px;
+            visibility: hidden;
+            h4 {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                color: $main-color;
+            }
+            h5 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                color: black;
+                
+            }
+            hr {
+                margin: 10px 0 ;
+                background-color: $main-color;
+            }
+            ul {
+                list-style-type: disclosure-closed;
+                padding-left: 10px;
+                li {
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                } 
+            }
+            &.active {
+                visibility: visible;
+                padding: 20px;
+                left: 0;
+                min-height: 400px;
+                width: 300px;
+                transition: 0.6s all;
+                
+            }
+            &__back {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translate(-50%);
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $line-color;
+                &:hover {
+                    transition: 0.6s all;
+                    color: $main-color;
+                    text-shadow: 0 0 2px $main-color;
+                }
+            }
+        }
+    } 
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        .card {
+            &__title {
+                font-size: 36px;
+            }
+        }
+        .card__box {
+            &::after {
+                width: 100%;
+            }
+            .item-info {
+                width: 250px;
+            }
+            .item-card {
+                &__price-box {
+                    width: 230px;
+                }
+            }
+        }
+        
+    }
+}
