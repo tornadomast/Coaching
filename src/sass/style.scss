@@ -8,6 +8,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 .container {
     width: 1140px;
@@ -29,3 +30,4 @@ body {
 @import './block/menu';
 @import './block/card';
 @import './block/about';
+@import './block/certificates';

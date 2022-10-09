@@ -63,10 +63,29 @@ $(document).ready(function(){
         dots: false,
         infinite: true,
         speed: 300,
-        fade: true,
+        fade: false,
         arrows: false,
         cssEase: 'linear'
       });
-
-      
   });
+  $(document).ready(function(){
+  $('.slideshow').slick({
+    slidesToShow: 3,
+    infinite: true,
+    arrows: false,
+    responsive:[
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow:2
+            }
+        },
+        {
+            breakpoint: 550,
+            settings: {
+                slidesToShow:1
+            }
+        }
+    ]
+  });
+});
