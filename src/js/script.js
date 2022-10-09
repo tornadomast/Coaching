@@ -67,25 +67,27 @@ $(document).ready(function(){
         arrows: false,
         cssEase: 'linear'
       });
-  });
-  $(document).ready(function(){
-  $('.slideshow').slick({
-    slidesToShow: 3,
-    infinite: true,
-    arrows: false,
-    responsive:[
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow:2
+      $('.slideshow').slick({
+        slidesToShow: 2,
+        infinite: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive:[
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow:2
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow:1
+                }
             }
-        },
-        {
-            breakpoint: 550,
-            settings: {
-                slidesToShow:1
-            }
-        }
-    ]
+        ]
+      });
   });
-});
+  
+

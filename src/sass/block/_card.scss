@@ -70,7 +70,7 @@
                 justify-content: center;
                 img {
                     height: 160px;
-                    width: 100%;
+                    max-width: 100%;
                 }
             }
             &__title {

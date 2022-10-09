@@ -272,6 +272,58 @@
         
         
     </section>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts-photo">
+                    <img src="./img/contact.png" alt="photo">
+                </div>
+                <div class="contacts-items">
+                    <div class="title title_fs16 promo__subtitle">Контакти</div>
+                    <h2 class="title title_fs36">Зв'яжіться зі мною </h2>
+                    <div class="divided"></div>
+                    <div class="title title_fs16 contacts-text">будь-яким зручним для вас методом:</div>
+                    <div class="contacts__social">
+                        <a href="#" class="contacts-link">
+                            <img src="./icons/facebook.png" alt="">
+                        </a>
+                        <a href="#" class="contacts-link">
+                            <img src="./icons/instagram.png" alt="">
+                        </a>
+                        <a href="#" class="contacts-link">
+                            <img src="./icons/telegram.png" alt="">
+                        </a>
+                    </div>
+                    <div class="title title_fs16 contacts-text">
+                        Або залиште ваші дані і я сама вам напишу
+                    </div>
+                    <form  action="#" class="contacts__form" id="send">
+                        <div class="contacts__input">
+                            <input required  name="name" type="text" placeholder="ім'я">
+                            <label for="name">Ваше ім'я <br></label>
+                        </div>
+                        <div class="contacts__input">
+                            <input required minlength: 3 name="email" type="email" placeholder="пошта@com.ua">
+                            <label for="email">Ваша пошта<br></label>
+                        </div>
+                        <div class="contacts__textarea">
+                            <textarea required name="comment" placeholder="напишіть повідомлення..."></textarea>
+                            <label for="comment">Введіть ваше повідомлення</label>
+                        </div>
+                        <div class="contacts__triggers">
+                            <div> <button id="consult" class="contacts__btn">Відправити повідомлення</button>
+                            </div>
+                            <div class="contacts__policy">
+                                <input required name="agree" id="agree" type="checkbox"> <span>Я згоден <a href="./policy.html">с політикою конфіденційності</a> </span>
+                                
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/slick.js"></script>

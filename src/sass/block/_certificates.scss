@@ -27,8 +27,26 @@
 }
 
 @media (max-width:767px){
-	.wrapper{padding: 50px 10px;}
+	.wrapper{
+        padding: 50px 10px;
+    }
     .slider {
 		padding: 0px 40px;
 	}
+}
+
+@media (max-width: 550px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .certificates {
+        &__wrapper {
+            .slideshow {
+                &__item {
+                    padding: 0px;
+                }
+            }
+        }
+    }
 }
