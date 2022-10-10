@@ -7,36 +7,6 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 });
 
-// const detalBtn = document.querySelector('.card__detals'),
-//     info = document.querySelector('.box-info__content'),
-//     box = document.querySelector('.box-info__list'),
-//     come = document.querySelector('.box-info__back');
-
-// detalBtn.addEventListener('click', () => {
-//     info.classList.add('active');
-//     box.classList.add('active');
-// });
-// come.addEventListener('click', () => {
-//     info.classList.remove('active');
-//     box.classList.remove('active');
-// });
-
-
-// $('.card__detals').each(function(i) {
-//     $(this).on('click', function(e) {
-//         e.preventDefault();
-//         $('.box-info__content').eq(i).toggleClass('box-info__content_active');
-//         $('.box-info__list').eq(i).toggleClass('active');
-//     });
-// });
-// $('.box-info__back').each(function(i) {
-//     $(this).on('click', function(e) {
-//         e.preventDefault();
-//         $('.box-info__content').eq(i).removeClass('box-info__content_active');
-//         $('.box-info__list').eq(i).removeClass('active');
-//     });
-// });
-
 $('.item-card__detal').each(function(i) {
         $(this).on('click', function(e) {
             e.preventDefault();
@@ -52,8 +22,10 @@ $('.item-info__back').each(function(i) {
         });
     });
 
-
-
+   //закриття модалього вікна
+$('.modal__close').on('click', function() {
+    $('.overflow, #answer').fadeOut('slow');
+    });
 $(document).ready(function(){
     $('.slider__carousel').slick({
         slidesToShow: 1,
@@ -89,5 +61,54 @@ $(document).ready(function(){
         ]
       });
   });
+  
+  //Validation form
+$().ready(function() {
+    $('#sendletter').validate({
+              rules: {
+                name: {
+                  required: true
+                },
+                comment: {
+                  required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                agree: {
+                    required: true,
+                    aria: false
+                }
+            },
+            messages: {
+                          name: "Будь ласка введіть своє ім'я",
+                          comment: "Напишіть cюди щось..",
+                          agree : "будь ласка підтвердіть свою згоду",
+                          email: {
+                          required: "Нам потрібна ваша пошта, щоб зв'язатись з вами",
+                          email: "Введіть правильну поштову адресу"
+                          }
+                        }
+    });
+    $('#sendletter').submit(function(e) {
+                e.preventDefault();
+                if (!$(this).valid()) {
+                    return;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/mailer/smart.php",
+                    data: $(this).serialize()
+                }).done(function(){
+                    $(this).find("input").val("");
+                    $('.overflow, #answer').fadeIn();
+                    $('#sendletter').trigger('reset');
+                });
+               
+                return false;
+        });
+});
+  
   
 
