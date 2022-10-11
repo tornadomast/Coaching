@@ -230,8 +230,9 @@
             grid-template-columns: 375px;
         }
         &__form {
-            grid-template: 45px 190px 45px/150px 150px;
+            grid-template: 45px 190px 45px/180px 180px;
             justify-content: space-around;
+            row-gap: 45px;
         }
         .title {
             &_fs36 {
