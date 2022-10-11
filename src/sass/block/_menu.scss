@@ -39,6 +39,9 @@
         line-height: 35px;
         cursor: pointer;
     }
+    #line {
+        text-decoration: underline;
+    }
 }
 
 @media (max-width: 576px) {

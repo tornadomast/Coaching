@@ -1,10 +1,32 @@
 "use sctrict";
+//гамбургер
+
 const hamburger = document.querySelector('.navbar__hamburger'),
-        menu = document.querySelector('.menu');
+        menu = document.querySelector('.menu'),
+        button1 = document.getElementById('1'),
+        button2 = document.getElementById('2'),
+        button3 = document.getElementById('3'),
+        button4 = document.getElementById('4');
 
 hamburger.addEventListener('click', () => {
     menu.classList.toggle('active');
     hamburger.classList.toggle('active');
+});
+button1.addEventListener('click', () => {
+    menu.classList.remove('active');
+    hamburger.classList.remove('active');
+});
+button2.addEventListener('click', () => {
+    menu.classList.remove('active');
+    hamburger.classList.remove('active');
+});
+button3.addEventListener('click', () => {
+    menu.classList.remove('active');
+    hamburger.classList.remove('active');
+});
+button4.addEventListener('click', () => {
+    menu.classList.remove('active');
+    hamburger.classList.remove('active');
 });
 
 $('.item-card__detal').each(function(i) {
@@ -26,6 +48,8 @@ $('.item-info__back').each(function(i) {
 $('.modal__close').on('click', function() {
     $('.overflow, #answer').fadeOut('slow');
     });
+
+    //слайдер
 $(document).ready(function(){
     $('.slider__carousel').slick({
         slidesToShow: 1,
