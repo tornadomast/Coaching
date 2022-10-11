@@ -63,7 +63,7 @@ $(document).ready(function(){
         arrows: false,
         cssEase: 'linear'
       });
-      $('.slideshow').slick({
+      $('.certificates__carousel').slick({
         slidesToShow: 2,
         infinite: true,
         arrows: false,
