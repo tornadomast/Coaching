@@ -53,6 +53,10 @@
                 color: $main-color;
             }
         }
+        &_link {
+            text-decoration: none;
+            color: $main-color;
+        }
     }
     &__divided {
         width: 700px;

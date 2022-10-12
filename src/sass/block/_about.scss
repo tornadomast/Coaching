@@ -1,6 +1,6 @@
 .about {
     &__wrapper {
-        padding: 100px 20px 60px 20px;
+        padding: 0px 20px 60px 20px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -14,7 +14,7 @@
                 font-size: 40px;
                 line-height: 56px;
                 color: #101130;
-                @include circle;
+                //@include circle;
             }
             &__subtitle {
                 margin: 15px 0;
