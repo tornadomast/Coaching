@@ -1,6 +1,7 @@
 <?php 
 
 $name = $_POST['name'];
+$phone = $_POST['phone'];
 $email = $_POST['email'];
 $textin = $_POST['comment'];
 
@@ -32,6 +33,7 @@ $mail->Subject = 'Letter from Coach site';
 $mail->Body    = '
 	Вам прийшов лист <style>font-size: 30px;</style> <br> 
 	Імя: ' . $name . ' <br>
+	Номер телефону: ' . $phone . '<br>
 	E-mail: ' . $email . ' <br>
 	Повідомлення: ' . $textin . '' ;
 

@@ -44,12 +44,27 @@ $('.item-info__back').each(function(i) {
         });
     });
 
-   //закриття модалього вікна
+//закриття модалього вікна "дякую"
 $('.modal__close').on('click', function() {
     $('.overflow, #answer').fadeOut('slow');
     });
 
-    //слайдер
+//відкриття вікна консультація
+$('.about-item__button').on('click', function() {
+    $('.overflow, #consultation').fadeIn('slow');
+    $('.navbar').fadeOut('slow');
+    });
+
+//закриття вікна консультація
+$('.modal-consult__close').on('click', function() {
+    $('.overflow, #consultation').fadeOut('slow');
+    $('.navbar').fadeIn('slow');
+    });
+
+// //маска номеру телефона
+// $("input[name=phone]").mask("+38(999) 999-99-99");
+
+//слайдер
 $(document).ready(function(){
     $('.slider__carousel').slick({
         slidesToShow: 1,
@@ -133,6 +148,47 @@ $().ready(function() {
                 return false;
         });
 });
+
+$().ready(function() {
+    $('#consultsend').validate({
+              rules: {
+                name: {
+                  required: true
+                },
+                comment: {
+                  required: true
+                },
+                phone: {
+                    required: true
+                }
+            },
+            messages: {
+                          name: "Будь ласка введіть своє ім'я",
+                          comment: "Напишіть cюди повідомлення",
+                          phone: "Будь ласка введіть свій номер"
+                        }
+    });
+    $('#consultsend').submit(function(e) {
+                e.preventDefault();
+                if (!$(this).valid()) {
+                    return;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/mailer/smart.php",
+                    data: $(this).serialize()
+                }).done(function(){
+                    $(this).find("input").val("");
+                    $('.overflow, #answer').fadeIn();
+                    $('#consultation').fadeOut('slow');
+                    $('#consultsend').trigger('reset');
+                });
+               
+                return false;
+        });
+});
+
+
   
   
 

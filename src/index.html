@@ -118,7 +118,7 @@
                 <div class="about-item">
                     <div class="about-item__title">Я допомагаю пізнати себе та зрозуміти свої істинні бажання</div>
                     <div class="about-item__subtitle">Вже після одної зустрічі клієнти йдуть з ясним розумінням та баченням свого майбутнього</div>
-                    <!-- <a href="#works" class="about-item__button promo__button"><button>До роботи</button></a> -->
+                    <button class="about-item__button">Замовити консультацію</button>
                 </div>
                 <div class="about-video">
                     <div class="about-video__video">
@@ -411,6 +411,17 @@
         </div>
     </section>
     <div class="overflow" id="overflow">
+        <div class="modal-consult" id="consultation">
+            <div class="modal-consult__close">&#10008;</div>
+            <div class="modal-consult__header">Заповніть форму заявки</div>
+            <div class="modal-consult__descr">і я обов'язково з вами зв'яжусь</div>
+            <form class="contacts__form" action="#" id="consultsend">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="напишіть повідомлення..."></textarea>
+                <button  class="contacts__btn contacts__btn_center">Замовити консультацію</button>
+            </form>
+        </div>
         <div class="modal" id="answer">
             <div class="modal__close">&#10008;</div>
             <div class="modal__header">Дякуємо за ваше звернення</div>

@@ -24,6 +24,21 @@
                 color: #000000;
 
             }
+            &__button{
+                width: 200px;
+                height: 60px;
+                background: #F77E53;
+                border-radius: 16px;
+                color: white;
+                border: none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                &:hover {
+                    transition: 0.6s all;
+                    transform: scale(1.1);
+                    
+                }
+                
+            }     
         }
         .about-video {
             width: 100%;
