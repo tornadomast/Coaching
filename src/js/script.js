@@ -61,8 +61,8 @@ $('.modal-consult__close').on('click', function() {
     $('.navbar').fadeIn('slow');
     });
 
-// //маска номеру телефона
-// $("input[name=phone]").mask("+38(999) 999-99-99");
+//маска номеру телефона
+$("input[name=phone]").mask("+38(999) 999-99-99");
 
 //слайдер
 $(document).ready(function(){
