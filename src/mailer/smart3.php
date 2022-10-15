@@ -19,7 +19,7 @@ $mail->Password = 'onqwlzqqnfxrkefr';                           // Наш пар
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('mytestproject.js@gmail.com', 'Coaching');   // От кого письмо 
+$mail->setFrom('mytestproject.js@gmail.com', 'Coaching cards');   // От кого письмо 
 $mail->addAddress('tornadomast@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -29,11 +29,11 @@ $mail->addAddress('tornadomast@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Лист з сайту коуч Консультація';
+$mail->Subject = 'Замовлення трансформаційна гру "DreamWay';
 $mail->Body    = '
-	<h1>Вам прийшов лист Зворотній звязок</h1>  <br> 
+	<h1>Вам прийшло замовленя на трансформаційну гру "DreamWay"</h1>  <br> 
 	Імя: '. $name .' <br>
-	E-mail: ' . $email . ' <br>
+	Номер телефону: ' . $phone . '<br>
 	Повідомлення: ' . $textin . '' ;
 
 if(!$mail->send()) {

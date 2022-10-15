@@ -118,7 +118,7 @@
                 <div class="about-item">
                     <div class="about-item__title">Я допомагаю пізнати себе та зрозуміти свої істинні бажання</div>
                     <div class="about-item__subtitle">Вже після одної зустрічі клієнти йдуть з ясним розумінням та баченням свого майбутнього</div>
-                    <button class="about-item__button">Замовити консультацію</button>
+                    <!-- <button class="about-item__button">Замовити консультацію</button> -->
                 </div>
                 <div class="about-video">
                     <div class="about-video__video">
@@ -139,11 +139,12 @@
                     <div  class="card__box">
                         <div   class="item-card">
                             <div class="item-card__picture"><img src="./img/card/01.png" alt="1"></div>
-                            <div class="item-card__title">Коуч-сесія</div>
+                            <div class="item-card__title">Коуч-сесія<br>онлайн/офлайн</div>
                             <div class="item-card__detal">детальніше</div>
                             <div class="item-card__price-box">
                                 <div class="item-card__price">1800&#8372;</div>
-                                <a href="https://secure.wayforpay.com/button/b57c24a9122fa"><button class="item-card__btn">придбати</button></a>
+                                <!-- <a href="https://secure.wayforpay.com/button/b57c24a9122fa"><button class="item-card__btn">придбати</button></a> -->
+                                <button id="item-card1" class="item-card__btn">придбати</button>
                             </div>
                         </div>
                         <div class="item-info">
@@ -166,7 +167,8 @@
                             <div class="item-card__detal">детальніше</div>
                             <div class="item-card__price-box">
                                 <div class="item-card__price">1800&#8372;</div>
-                                <a href="https://secure.wayforpay.com/button/b1f756a766960" ><button class="item-card__btn">придбати</button></a>
+                                <!-- <a href="https://secure.wayforpay.com/button/b1f756a766960" ><button class="item-card__btn">придбати</button></a> -->
+                                <button id="item-card2" class="item-card__btn">придбати</button>
                             </div>
                         </div>
                         <div class="item-info">
@@ -191,7 +193,8 @@
                             <div class="item-card__detal">детальніше</div>
                             <div class="item-card__price-box">
                                 <div class="item-card__price">900&#8372;</div>
-                                <a href="https://secure.wayforpay.com/button/b28c6c4854f42"><button class="item-card__btn">придбати</button></a>
+                                <!-- <a href="https://secure.wayforpay.com/button/b28c6c4854f42"><button class="item-card__btn">придбати</button></a> -->
+                                <button id="item-card3" class="item-card__btn">придбати</button>
                             </div>
                         </div>
                         <div class="item-info">
@@ -212,11 +215,12 @@
                     <div class="card__box">
                         <div class="item-card">
                             <div class="item-card__picture"><img src="./img/card/04.png" alt="1"></div>
-                            <div class="item-card__title">Ресурсний щоденник</div>
+                            <div class="item-card__title">Ресурсний щоденник<br>коучинговий телеграм-канал</div>
                             <div class="item-card__detal">детальніше</div>
                             <div class="item-card__price-box">
                                 <div class="item-card__price">51&#8372;/3дні</div>
-                                <a href="https://secure.wayforpay.com/button/b56e300ea556d"><button class="item-card__btn">придбати</button></a>
+                                <!-- <a href="https://secure.wayforpay.com/button/b56e300ea556d"><button class="item-card__btn">придбати</button></a> -->
+                                <button id="item-card4" class="item-card__btn">придбати</button>
                             </div>
                         </div>
                         <div class="item-info">
@@ -235,11 +239,12 @@
                     <div class="card__box">
                         <div class="item-card">
                             <div class="item-card__picture"><img src="./img/card/05.png" alt="1"></div>
-                            <div class="item-card__title">Ретрит</div>
+                            <div class="item-card__title">Ретрит одного дня<br>за Києвом</div>
                             <div class="item-card__detal">детальніше</div>
                             <div class="item-card__price-box">
                                 <div class="item-card__price">1950&#8372;</div>
-                                <a href="https://secure.wayforpay.com/button/bad876cdf34dd"><button class="item-card__btn">придбати</button></a>
+                                <!-- <a href="https://secure.wayforpay.com/button/bad876cdf34dd"><button class="item-card__btn">придбати</button></a> -->
+                                <button id="item-card5" class="item-card__btn">придбати</button>
                             </div>
                         </div>
                         <div class="item-info">
@@ -422,6 +427,107 @@
                 <button  class="contacts__btn contacts__btn_center">Замовити консультацію</button>
             </form>
         </div>
+        <!-- Модальне вікно після натискання кнопки придбати Коуч сесія -->
+        <div class="modal-sale" id="sale1">
+            <div class="modal-sale__close" id="modal-close1">&#10008;</div>
+            <div class="modal-sale__header">Ваше замовлення:</div>
+            <div class="modal-sale__descr">Коуч-сесія</div>
+            <div class="modal-sale__subtitle">Будь ласка, заповніть форму перед оплатою &#9993;</div>
+            <form class="modal-sale__form" action="#" id="modal-sale1">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="вкажіть зручну дату проведення"></textarea>
+                <button  class="modal-sale__button">Перейти до оплати</button>
+            </form>
+        </div>
+        <!-- Модальне вікно з підтвердженням оплати Коуч сесія -->
+        <div class="modal-confirm" id="confirm1">
+            <div class="modal-confirm__header">Дякую за замовлення!</div>
+            <div class="modal-confirm__descr">Будь ласка, проведіть оплату</div>
+            <a class="modal-confirm__button" href="https://secure.wayforpay.com/button/b57c24a9122fa">оплатити<br>1800&#8372;</a>
+        </div>
+         <!-- Модальне вікно після натискання кнопки придбати Розпаковка бажань -->
+         <div class="modal-sale" id="sale2">
+            <div class="modal-sale__close" id="modal-close2">&#10008;</div>
+            <div class="modal-sale__header">Ваше замовлення:</div>
+            <div class="modal-sale__descr">Розпаковка істинних бажань</div>
+            <div class="modal-sale__subtitle">Будь ласка, заповніть форму перед оплатою &#9993;</div>
+            <form class="modal-sale__form" action="#" id="modal-sale2">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="вкажіть зручну дату проведення"></textarea>
+                <button  class="modal-sale__button">Підтвердити</button>
+            </form>
+        </div>
+        <!-- Модальне вікно з підтвердженням оплати Розпаковка бажань -->
+        <div class="modal-confirm" id="confirm2">
+            <div class="modal-confirm__header">Дякую за замовлення!</div>
+            <div class="modal-confirm__descr">Будь ласка, проведіть оплату</div>
+            <a class="modal-confirm__button" href="https://secure.wayforpay.com/button/b1f756a766960">оплатити<br>1800&#8372;</a>
+        </div>
+
+        <!-- Модальне вікно після натискання кнопки придбати Дрім вей -->
+        <div class="modal-sale" id="sale3">
+            <div class="modal-sale__close" id="modal-close3">&#10008;</div>
+            <div class="modal-sale__header">Ваше замовлення:</div>
+            <div class="modal-sale__descr">Трансформаційна гра "DreamWay"</div>
+            <div class="modal-sale__subtitle">Будь ласка, заповніть форму перед оплатою &#9993;</div>
+            <form class="modal-sale__form" action="#" id="modal-sale3">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="вкажіть зручну дату проведення"></textarea>
+                <button  class="modal-sale__button">Підтвердити</button>
+            </form>
+        </div>
+        <!-- Модальне вікно з підтвердженням оплати Дрім вей -->
+        <div class="modal-confirm" id="confirm3">
+            <div class="modal-confirm__header">Дякую за замовлення!</div>
+            <div class="modal-confirm__descr">Будь ласка, проведіть оплату</div>
+            <a class="modal-confirm__button" href="https://secure.wayforpay.com/button/b28c6c4854f42">оплатити<br>900&#8372;</a>
+        </div>
+
+        <!-- Модальне вікно після натискання кнопки придбати Ресурсний щоденник -->
+        <div class="modal-sale" id="sale4">
+            <div class="modal-sale__close" id="modal-close4">&#10008;</div>
+            <div class="modal-sale__header">Ваше замовлення:</div>
+            <div class="modal-sale__descr">Ресурсний щоденник</div>
+            <div class="modal-sale__subtitle">Будь ласка, заповніть форму перед оплатою &#9993;</div>
+            <form class="modal-sale__form" action="#" id="modal-sale4">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="ваше повідомлення"></textarea>
+                <button  class="modal-sale__button">Підтвердити</button>
+            </form>
+        </div>
+        <!-- Модальне вікно з підтвердженням оплати Ресурсний щоденник -->
+        <div class="modal-confirm" id="confirm4">
+            <div class="modal-confirm__header">Дякую за замовлення!</div>
+            <div class="modal-confirm__descr">Будь ласка, проведіть оплату</div>
+            <a class="modal-confirm__button" href="https://secure.wayforpay.com/button/b56e300ea556d">оплатити<br>51&#8372;</a>
+        </div>
+
+        <!-- Модальне вікно після натискання кнопки придбати Ретрит -->
+        <div class="modal-sale" id="sale5">
+            <div class="modal-sale__close" id="modal-close5">&#10008;</div>
+            <div class="modal-sale__header">Ваше замовлення:</div>
+            <div class="modal-sale__descr">Ретрит</div>
+            <div class="modal-sale__subtitle">Будь ласка, заповніть форму перед оплатою &#9993;</div>
+            <form class="modal-sale__form" action="#" id="modal-sale5">
+                <input  name="name" placeholder="Ваше ім'я" type="text">
+                <input  name="phone" placeholder="Ваш телефон" >
+                <textarea  name="comment" placeholder="ваше повідомлення"></textarea>
+                <button  class="modal-sale__button">Підтвердити</button>
+            </form>
+        </div>
+        <!-- Модальне вікно з підтвердженням оплати Ретрит -->
+        <div class="modal-confirm" id="confirm5">
+            <div class="modal-confirm__header">Дякую за замовлення!</div>
+            <div class="modal-confirm__descr">Будь ласка, проведіть оплату</div>
+            <a class="modal-confirm__button" href="https://secure.wayforpay.com/button/bad876cdf34dd">оплатити<br>1950&#8372;</a>
+        </div>
+
+
+        <!-- модалка дякую -->
         <div class="modal" id="answer">
             <div class="modal__close">&#10008;</div>
             <div class="modal__header">Дякуємо за ваше звернення</div>

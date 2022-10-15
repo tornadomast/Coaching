@@ -1,15 +1,5 @@
-.overflow {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, .56);
-    top: 0;
-    &_active {
-        display: block;
-    }
-    .modal-consult {
-        position: absolute;
+.modal-sale {
+    position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50% );
@@ -34,34 +24,41 @@
         }
         &__header {
             font-weight: 700;
-            font-size: 19px;
+            font-size: 22px;
             line-height: 19px;
             text-align: center;
             color: #0D0D0D;
         }
         &__descr {
-            margin-top: 10px;
+            margin-top: 12px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 18px;
             line-height: 14px;
             text-align: center;
             color: #0D0D0D;
         }
-        .contacts__form {
+        &__subtitle {
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            color: #0D0D0D;
+        }
+        .modal-sale__form {
             margin-top: 36px;
             display: flex;
             flex-direction: column;
             width: 300px;
             #name-error {
                 font-size: 13px;
-                top: 180px;
+                top: 170px;
                 left: 30px;
                 color:red;
                 text-shadow: 0px 0px black;
             }
             #phone-error {
                 font-size: 13px;
-                top: 280px;
+                top: 270px;
                 left: 30px;
                 color:red;
                 text-shadow: 0px 0px black;
@@ -69,7 +66,7 @@
             #comment-error {
                 font-size: 13px;
                 left: 30px;
-                top: 400px;
+                top: 375px;
                 color:red;
                 text-shadow: 0px 0px black;
             }
@@ -111,53 +108,83 @@
                     outline-color:$border-color ;
                 }
             }
-            .contacts__btn_center {
+        }
+            &__button {
                 margin: 0 auto;
+                padding: 0 3px;
+                margin-top: 10px;
+                cursor: pointer;
+                width: fit-content;
+                height: 50px;  
+                border: 2px Solid $border-color;
+                border-radius: 12px;
+                background: white;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                &:hover {
+                transition: 0.6s all;
+                background-color: $main-color;
+                color: white;
+                }
             }
-        }
-        
-    }
-    .modal {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50% );
-        border-radius: 10px;
-        padding: 35px 30px 40px 30px;
-        width: 382px;
-        min-height: fit-content;
-        background-color: rgb(196, 196, 196);
-        &__header {
-            font-weight: 700;
-            font-size: 19px;
-            line-height: 19px;
-            text-align: center;
-            color: #0D0D0D;
-        }
-        &__descr {
-            margin-top: 10px;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 14px;
-            text-align: center;
-            color: #0D0D0D;
-        }
-        &__close {
-            position: absolute;
-            color: $main-color;
-            top: 0;
-            right: 0px;
-            line-height: 30px;
-            cursor: pointer;
-            font-size: 30px;
-            &:hover {
-                font-size: 27px;
-    
-            }
-        }
-        
-    }
 }
-#answer, #consultation, #sale1, #confirm1, #sale2, #confirm2, #sale3, #confirm3, #sale4, #confirm4, #sale5, #confirm5 {
-    display: none;
+
+.modal-confirm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50% );
+    border-radius: 10px;
+    border: 2px solid $main-color;
+    padding: 35px 30px 40px 30px;
+    width: 382px;
+    min-height: fit-content;
+    background-color: rgb(196, 196, 196);
+    &__header {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 19px;
+        text-align: center;
+        color: #0D0D0D;
+        margin-bottom: 20px;
+    }
+    &__descr {
+        margin: 10px 30px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 14px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+    // &__close {
+    //     position: absolute;
+    //     color: $main-color;
+    //     top: 0;
+    //     right: 0px;
+    //     line-height: 30px;
+    //     cursor: pointer;
+    //     font-size: 30px;
+    //     &:hover {
+    //         font-size: 27px;
+
+    //     }
+    // }
+    &__button {
+        margin-top: 20px;
+        width: 100px;
+        height: fit-content;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        margin: 20px auto;
+        padding: 7px;
+        color: white;
+        background: $main-color;
+        border: 1px solid $border-color;
+        box-shadow: 0 1px 5px #000;
+        border-radius: 7px;
+        &:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+    }
 }
