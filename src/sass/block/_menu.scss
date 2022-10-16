@@ -8,7 +8,7 @@
     z-index: 4;
     visibility: hidden;
     transition: all 2s;
-    background-color: #ededee;
+    background-color: rgb(237, 237, 238, 0.9);
     &.active {
         position: fixed;
         top: 92px;
