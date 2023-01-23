@@ -20,6 +20,8 @@
                 font-size: 14px;
                 line-height: 16px;
                 color: $main-color;
+                display: block;
+                text-decoration: none;
             }
         }
         .icon-pay {
@@ -112,7 +114,7 @@
                 width: fit-content;
                 display: flex;
                 align-items:center;
-                bottom: -120px;
+                bottom: -140px;
                     img {
                         padding: 0 5px;
                     }

@@ -10,6 +10,7 @@
 	"browser": true,
 	"devel": true,
 	"jquery": true,
-    "esversion": 9,
-    "node": true
+	"esversion": 9,
+	"node": true,
+	"wow": true
 }

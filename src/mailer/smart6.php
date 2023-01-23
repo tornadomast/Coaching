@@ -29,9 +29,9 @@ $mail->addAddress('iryna.krasulia@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Замовлення Коуч сесія';
+$mail->Subject = 'Замовлення на Гайд';
 $mail->Body    = '
-	<h1>Вам прийшло замовленя на коуч-сесію</h1>  <br> 
+	<h1>Вам прийшло замовленя на Гайд</h1>  <br> 
 	Імя: '. $name .' <br>
 	Номер телефону: ' . $phone . '<br>
 	Повідомлення: ' . $textin . '' ;

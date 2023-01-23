@@ -112,7 +112,12 @@ $('#item-card5').on('click', function() {
       $('.overflow, #sale5').fadeIn('slow');
       $('.navbar').fadeOut('slow');
     });
-
+   // відкриття модального вікна при натисканні кнопки придбати Гайд
+   $('#item-card6').on('click', function() {
+    // $('#sale5 .modal-sale__descr').text($('.item-card__title').eq(i).text());
+     $('.overflow, #sale6').fadeIn('slow');
+     $('.navbar').fadeOut('slow');
+   });
 //закриття вікна консультація
 $('.modal-consult__close, .modal-sale__close').on('click', function() {
     $('.overflow, #consultation, #sale1').fadeOut('slow');
@@ -284,7 +289,7 @@ $().ready(function() {
                 }).done(function(){
                     $(this).find("input").val("");
                     $('.overflow, #confirm1').fadeIn();
-                    $('#sale1, #confirm2, #confirm3, #confirm4, #confirm5').fadeOut('slow');
+                    $('#sale1, #confirm2, #confirm3, #confirm4, #confirm5, #confirm6').fadeOut('slow');
                     $('#modal-sale1').trigger('reset');
                 });
                
@@ -325,7 +330,7 @@ $().ready(function() {
                 }).done(function(){
                     $(this).find("input").val("");
                     $('.overflow, #confirm2').fadeIn();
-                    $('#sale2, #confirm1, #confirm3, #confirm4, #confirm5').fadeOut('slow');
+                    $('#sale2, #confirm1, #confirm3, #confirm4, #confirm5, #confirm6').fadeOut('slow');
                     $('#modal-sale2').trigger('reset');
                 });
                
@@ -364,7 +369,7 @@ $().ready(function() {
                 }).done(function(){
                     $(this).find("input").val("");
                     $('.overflow, #confirm3').fadeIn();
-                    $('#sale3, #confirm1, #confirm2, #confirm4, #confirm5').fadeOut('slow');
+                    $('#sale3, #confirm1, #confirm2, #confirm4, #confirm5, #confirm6').fadeOut('slow');
                     $('#modal-sale3').trigger('reset');
                 });
                
@@ -403,8 +408,8 @@ $().ready(function() {
                 }).done(function(){
                     $(this).find("input").val("");
                     $('.overflow, #confirm4').fadeIn();
-                    $('#sale4, #confirm1, #confirm2, #confirm3, #confirm5').fadeOut('slow');
-                    $('#modal-sale3').trigger('reset');
+                    $('#sale4, #confirm1, #confirm2, #confirm3, #confirm5, #confirm6').fadeOut('slow');
+                    $('#modal-sale4').trigger('reset');
                 });
                
                 return false;
@@ -442,12 +447,56 @@ $().ready(function() {
                 }).done(function(){
                     $(this).find("input").val("");
                     $('.overflow, #confirm5').fadeIn();
-                    $('#sale5, #confirm1, #confirm2, #confirm3, #confirm4').fadeOut('slow');
-                    $('#modal-sale3').trigger('reset');
+                    $('#sale5, #confirm1, #confirm2, #confirm3, #confirm4, #confirm6').fadeOut('slow');
+                    $('#modal-sale5').trigger('reset');
                 });
                
                 return false;
+  
 });
+
+// форма для оплати #confirm Гайд
+
+$('#modal-sale6').validate({
+  rules: {
+    name: {
+      required: true
+    },
+    comment: {
+      required: true
+    },
+    phone: {
+        required: true
+    }
+},
+messages: {
+              name: "Будь ласка, введіть своє ім'я",
+              comment: "Будь ласка, заповніть це поле",
+              phone: "Будь ласка, введіть свій номер"
+            }
+});
+$('#modal-sale6').submit(function(e) {
+    e.preventDefault();
+    if (!$(this).valid()) {
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: "/mailer/smart6.php",
+        data: $(this).serialize()
+    }).done(function(){
+        $(this).find("input").val("");
+        $('.overflow, #confirm6').fadeIn();
+        $('#sale6, #confirm1, #confirm2, #confirm3, #confirm4, #confirm5').fadeOut('slow');
+        $('#modal-sale6').trigger('reset');
+    });
+   
+    return false;
+
+});
+ //wow animate
+ 
+new WOW().init();
 
   
   
